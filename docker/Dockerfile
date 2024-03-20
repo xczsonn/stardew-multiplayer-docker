@@ -9,12 +9,12 @@ RUN apt-get install -y wget unzip tar strace mono-complete xterm gettext-base jq
 RUN APP_ICON_URL=https://stardewcommunitywiki.com/mediawiki/images/4/48/Fiddlehead_Fern.png && \
     install_app_icon.sh "$APP_ICON_URL"
 
-# Game + ModLoader 1.5.6 3.18.2
+# Game + ModLoader 1.6.1 4.0.1
 RUN mkdir -p /data/Stardew && \
     mkdir -p /data/nexus && \
-    wget https://eris.cc/Stardew_latest.tar.gz -qO /data/latest.tar.gz && \
-    tar xf /data/latest.tar.gz -C /data/Stardew && \
-    rm /data/latest.tar.gz 
+    wget "https://www.dropbox.com/scl/fi/rqin9sb41c5dtsio5ohys/Stardew-Valley-1.6.zip?rlkey=mdkkiozw4g0pwy6jda61vrljo&" -qO /data/latest.zip && \
+    unzip /data/latest.zip -d /data/Stardew && \
+    rm /data/latest.zip
 
 RUN wget -qO dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/6788a5a5-1879-4095-948d-72c7fbdf350f/c996151548ec9f24d553817db64c3577/dotnet-sdk-5.0.402-linux-x64.tar.gz \
 #RUN wget -qO dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/95352809-7f41-40f3-974d-8d530321a8e4/0024d7bf0c872f176ceba7a63a34915b/dotnet-runtime-6.0.0-linux-musl-x64.tar.gz \
@@ -22,16 +22,16 @@ RUN wget -qO dotnet.tar.gz https://download.visualstudio.microsoft.com/download/
     && rm dotnet.tar.gz \
     && ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet 
 
-RUN wget https://github.com/Pathoschild/SMAPI/releases/download/3.18.2/SMAPI-3.18.2-installer.zip -qO /data/nexus.zip && \
+RUN wget "https://mediafilez.forgecdn.net/files/5196/995/SMAPI%204.0.1%204.0.1.zip" -qO /data/nexus.zip && \
     unzip /data/nexus.zip -d /data/nexus/ && \
-    /bin/bash -c "SMAPI_NO_TERMINAL=true SMAPI_USE_CURRENT_SHELL=true echo -e \"2\n\n\" | /data/nexus/SMAPI\ 3.18.2\ installer/internal/linux/SMAPI.Installer --install --game-path \"/data/Stardew/Stardew Valley\"" || :
+    /bin/bash -c "SMAPI_NO_TERMINAL=true SMAPI_USE_CURRENT_SHELL=true echo -e \"2\n\n\" | /data/nexus/SMAPI\ 4.0.1\ installer/internal/linux/SMAPI.Installer --install --game-path \"/data/Stardew/Stardew Valley/game\"" || :
 
 
 # Add Mods & Scripts
-COPY ["mods/", "/data/Stardew/Stardew Valley/Mods/"]
+COPY ["mods/", "/data/Stardew/Stardew Valley/game/Mods/"]
 COPY scripts/ /opt/
 
-RUN chmod +x /data/Stardew/Stardew\ Valley/StardewValley && \
+RUN chmod +x /data/Stardew/Stardew\ Valley/game/StardewValley && \
     chmod -R 777 /data/Stardew/ && \
     chown -R 1000:1000 /data/Stardew && \
     chmod +x /opt/*.sh

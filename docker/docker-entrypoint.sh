@@ -1,7 +1,7 @@
 #!/bin/bash
 export HOME=/config
 
-for modPath in /data/Stardew/Stardew\ Valley/Mods/*/
+for modPath in /data/Stardew/Stardew\ Valley/game/Mods/*/
 do
   mod=$(basename "$modPath")
 
@@ -33,9 +33,10 @@ done
 # Ready to start!
 
 export XAUTHORITY=~/.Xauthority
-TERM=
-sed -i -e 's/env TERM=xterm $LAUNCHER "$@"$/env SHELL=\/bin\/bash TERM=xterm xterm  -e "\/bin\/bash -c $LAUNCHER "$@""/' /data/Stardew/Stardew\ Valley/StardewValley
+sed -i 's/env TERM=xterm $LAUNCHER "$@"/env SHELL=\/bin\/bash TERM=xterm xterm  -e "\/bin\/bash -c $LAUNCHER \"$@\""/' /data/Stardew/Stardew\ Valley/game/Stardew\ Valley
 
-bash -c "/data/Stardew/Stardew\ Valley/StardewValley"
+
+# bash -c "/data/Stardew/Stardew\ Valley/game/Stardew\ Valley"
+bash -c "/data/Stardew/Stardew\ Valley/start.sh"
 
 sleep 233333333333333

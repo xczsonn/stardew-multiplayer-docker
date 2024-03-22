@@ -12,8 +12,9 @@ RUN APP_ICON_URL=https://stardewcommunitywiki.com/mediawiki/images/4/48/Fiddlehe
 # Game + ModLoader 1.6.1 4.0.1
 RUN mkdir -p /data/Stardew && \
     mkdir -p /data/nexus && \
-    wget "https://www.dropbox.com/scl/fi/rqin9sb41c5dtsio5ohys/Stardew-Valley-1.6.zip?rlkey=mdkkiozw4g0pwy6jda61vrljo&" -qO /data/latest.zip && \
+    wget https://mirror.cloudcraft.info/Stardew_Valley_latest.zip -qO /data/latest.zip && \
     unzip /data/latest.zip -d /data/Stardew && \
+    mv /data/Stardew/Stardew_Valley_latest /data/Stardew/Stardew\ Valley && \
     rm /data/latest.zip
 
 RUN wget -qO dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/6788a5a5-1879-4095-948d-72c7fbdf350f/c996151548ec9f24d553817db64c3577/dotnet-sdk-5.0.402-linux-x64.tar.gz \
@@ -22,7 +23,7 @@ RUN wget -qO dotnet.tar.gz https://download.visualstudio.microsoft.com/download/
     && rm dotnet.tar.gz \
     && ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet 
 
-RUN wget "https://mediafilez.forgecdn.net/files/5196/995/SMAPI%204.0.1%204.0.1.zip" -qO /data/nexus.zip && \
+RUN wget https://mirror.cloudcraft.info/SMAPI_latest.zip -qO /data/nexus.zip && \
     unzip /data/nexus.zip -d /data/nexus/ && \
     /bin/bash -c "SMAPI_NO_TERMINAL=true SMAPI_USE_CURRENT_SHELL=true echo -e \"2\n\n\" | /data/nexus/SMAPI\ 4.0.1\ installer/internal/linux/SMAPI.Installer --install --game-path \"/data/Stardew/Stardew Valley/game\"" || :
 

@@ -12,9 +12,9 @@ RUN APP_ICON_URL=https://stardewcommunitywiki.com/mediawiki/images/4/48/Fiddlehe
 # Game + ModLoader 1.6.1 4.0.1
 RUN mkdir -p /data/Stardew && \
     mkdir -p /data/nexus && \
-    wget https://mirror.cloudcraft.info/Stardew_Valley_latest.zip -qO /data/latest.zip && \
-    unzip /data/latest.zip -d /data/Stardew && \
-    rm /data/latest.zip
+    wget https://mirror.cloudcraft.info/Stardew_Valley_latest.tar.gz -qO /data/latest.tar.gz && \
+    tar xf /data/latest.tar.gz -C /data/Stardew && \
+    rm /data/latest.tar.gz 
 
 RUN wget -qO dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/6788a5a5-1879-4095-948d-72c7fbdf350f/c996151548ec9f24d553817db64c3577/dotnet-sdk-5.0.402-linux-x64.tar.gz \
 #RUN wget -qO dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/95352809-7f41-40f3-974d-8d530321a8e4/0024d7bf0c872f176ceba7a63a34915b/dotnet-runtime-6.0.0-linux-musl-x64.tar.gz \

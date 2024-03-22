@@ -174,6 +174,17 @@ Invite Code Bot: ﻿The server will copy the invite code to an "InviteCode.txt" 
 
 (See https://www.nexusmods.com/stardewvalley/mods/2677?tab=description for more info.)
 
+## Mods
+
+- [Always On Server](https://www.nexusmods.com/stardewvalley/mods/2677) (Default: Required)
+- [Auto Load Game](https://www.nexusmods.com/stardewvalley/mods/2509) (Default: On)
+- [Crops Anytime Anywhere](https://www.nexusmods.com/stardewvalley/mods/3000) (Default: Off)
+- [Friends Forever](https://www.nexusmods.com/stardewvalley/mods/1738) (Default: Off)
+- [No Fence Decay](https://www.nexusmods.com/stardewvalley/mods/1180) (Default: Off)
+- [Non Destructive NPCs](https://www.nexusmods.com/stardewvalley/mods/5176) (Default: Off)
+- [Remote Control](https://github.com/Novex/stardew-remote-control) (Default: On)
+- [TimeSpeed](https://www.nexusmods.com/stardewvalley/mods/169) (Default: Off)
+
 ## Troubleshooting
 
 ### Error Messages in Console

@@ -172,7 +172,7 @@ On port 5900 (mapped to 5902 by default) inside the container is a web interface
 Invite Code Auto Copy/Paste: The server will copy the most up-to-date invite code to the clipboard (on by default in the config.json file) whenever it changes. You can then use a macro program of your choice to paste that code into the chat service of your choice so that your non-steam friends can always have access to the most up-to-date invite code even when you are not there. For your convenience I've included an AutoHotkey script under the Files Tab> Optional Files﻿ here on Nexus that you can use. Run the Game Server>Run the AutoHotKey﻿ Script>Open Discord or other chat service and click into the chatbox of that service. The current invite code for your game will be pasted and sent every two minutes. Do not close the chat window of your chat service or click out of the chat box or it will not work. When the game server is turned off it will no longer copy the key so be sure to turn off AutoHotKey as well.
 Invite Code Bot: ﻿The server will copy the invite code to an "InviteCode.txt" file in the same folder as the mod. You can use this to make a bot for a chat service/website/etc. I've provided the code for a node.js Discord bot in the "Discord Bots" section at the bottom of this page.
 
-(See [Always On Server](https://www.nexusmods.com/stardewvalley/mods/2677?tab=description) for more info.)
+(Taken from mod description. See [Always On Server](https://www.nexusmods.com/stardewvalley/mods/2677?tab=description) for more info.)
 
 ## Mods
 
@@ -194,10 +194,6 @@ Usually you should be able to ignore any message there. If the game doesn't star
 ### VNC
 
 Access the game via VNC to initially load or start a pre-generated savegame. You can control the server from there or edit the config.json files in the configs folder.
-
-### Performance
-
-I'd recommend a VPS/Machine with at least four logical CPUs and 4GB Ram, otherwise there will be horrible lags. The minimum configuration I'd consider playable with two to four players would be two logical CPUs and 1GB of Ram.
 
 ## Disclaimer
 

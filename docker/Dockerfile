@@ -14,7 +14,6 @@ RUN mkdir -p /data/Stardew && \
     mkdir -p /data/nexus && \
     wget https://mirror.cloudcraft.info/Stardew_Valley_latest.zip -qO /data/latest.zip && \
     unzip /data/latest.zip -d /data/Stardew && \
-    mv /data/Stardew/Stardew_Valley_latest /data/Stardew/Stardew\ Valley && \
     rm /data/latest.zip
 
 RUN wget -qO dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/6788a5a5-1879-4095-948d-72c7fbdf350f/c996151548ec9f24d553817db64c3577/dotnet-sdk-5.0.402-linux-x64.tar.gz \

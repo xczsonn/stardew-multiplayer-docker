@@ -9,7 +9,7 @@ RUN apt-get install -y wget unzip tar strace mono-complete xterm gettext-base jq
 RUN APP_ICON_URL=https://stardewcommunitywiki.com/mediawiki/images/4/48/Fiddlehead_Fern.png && \
     install_app_icon.sh "$APP_ICON_URL"
 
-# Game + ModLoader 1.6.1 4.0.1
+# Game + ModLoader 1.6.2 4.0.1
 RUN mkdir -p /data/Stardew && \
     mkdir -p /data/nexus && \
     wget https://mirror.cloudcraft.info/Stardew_Valley_latest.tar.gz -qO /data/latest.tar.gz && \

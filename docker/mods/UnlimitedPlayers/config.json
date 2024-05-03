@@ -3,7 +3,10 @@
   "ClientMods": {
     "Denylist": [
       "CJBok.CheatsMenu",
-      "Ryaon.JunimoKartCheater"
+      "Ryaon.JunimoKartCheater",
+      "Pathoschild.ContentPatcher",
+      "bcmpinc.StardewHack",
+      "SMAPI.ConsoleCommands"
     ]
   }
 }

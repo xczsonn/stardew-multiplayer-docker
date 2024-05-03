@@ -1,5 +1,5 @@
 {
-  "PlayerLimit": 10,
+  "PlayerLimit": 32,
   "ClientMods": {
     "Denylist": [
       "CJBok.CheatsMenu",
